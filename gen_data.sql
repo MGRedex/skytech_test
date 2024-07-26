@@ -1,3 +1,6 @@
+CREATE TABLE gen_data (id int, randint int, randtext text, randdatetime timestamp(0));
+
+INSERT INTO gen_data 
 SELECT 
 CASE WHEN id%10=0 THEN NULL ELSE id END AS id, 
 CASE WHEN id%10=0 THEN NULL ELSE (random() * 10000)::int END AS randint, 
